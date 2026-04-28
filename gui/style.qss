@@ -1,0 +1,217 @@
+/* === Общий фон и шрифт === */
+QWidget {
+    background-color: #F7F9FA;
+    color: #023047;
+    font-family: "Segoe UI", sans-serif;
+    font-size: 10pt;
+}
+
+/* === Кнопки === */
+QPushButton {
+    background-color: #FB8500;
+    color: white;
+    border-radius: 6px;
+    padding: 6px 14px;
+    font-weight: 500;
+    border: none;
+
+}
+QPushButton:hover {
+    background-color: #FFB703;
+    color: #023047;
+}
+QPushButton:pressed {
+    background-color: #E07C00;
+}
+QPushButton:disabled {
+    background-color: #E0E0E0;
+    color: #888888;
+}
+
+/* === Кнопка-инфо "ⓘ" === */
+QPushButton:flat {
+    background: transparent;
+    color: #219EBC;
+    font-size: 12pt;
+    border: none;
+    padding: 4px 6px;
+}
+QPushButton:flat:hover {
+    background-color: #E6EEF3;
+    border-radius: 6px;
+    color: #FB8500;
+}
+
+/* === Таблицы === */
+QQTableWidget {
+    background-color: #FFFFFF;
+    border: 1px solid #BFDCE5;
+    gridline-color: #C0D3DD;
+    selection-background-color: #8ECAE6;
+    selection-color: #023047;
+    outline: none;
+    border-radius: 6px;
+}
+QTableWidget::item:selected {
+    background-color: #8ECAE6;
+    color: #023047;
+}
+QTableWidget::item:focus {
+    background-color: #FFB703;
+    border: 1px solid #FB8500;
+}
+QHeaderView::section {
+    background-color: #E3F3F9;
+    color: #023047;
+    font-weight: bold;
+    padding: 6px;
+    border: 1px solid #BFDCE5;
+    font-size: 9pt;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+
+/* === Поля ввода и ComboBox === */
+QLineEdit, QComboBox {
+    background-color: #FFFFFF;
+    border: 1px solid #BFDCE5;
+    border-radius: 10px;
+    padding: 6px 12px;
+    color: #023047;
+    selection-background-color: #8ECAE6;
+}
+QLineEdit:focus, QComboBox:focus {
+    border: 1px solid #219EBC;
+}
+
+/* === Выпадающее меню ComboBox === */
+QComboBox QAbstractItemView {
+    background-color: #FFFFFF;
+    border: 1px solid #BFDCE5;
+    margin-top: 5px;
+    border-radius: 10px;
+    selection-background-color: #FFB703;
+    selection-color: #023047;
+    padding: 4px;
+    outline: none;
+}
+QComboBox QAbstractItemView::item {
+    padding: 6px 10px;
+    border-bottom: 1px solid #E0E0E0;
+}
+QComboBox QAbstractItemView::item:selected {
+    background-color: #FFB703;
+    color: #023047;
+    outline: none;
+}
+
+/* === Область выпадающей стрелки === */
+QComboBox::drop-down {
+    subcontrol-origin: padding;
+    subcontrol-position: top right;
+    width: 28px;
+    border-left: 1px solid #BFDCE5;
+    background-color: #F0F4F8;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+/* === Иконка стрелки в виде SVG или PNG === */
+QComboBox::down-arrow {
+    image: url(gui/icons/menu-burger.SVG); 
+    width: 14px;
+    height: 14px;
+    margin-right: 6px;
+}
+
+
+
+/* === CheckBox с кругом === */
+QCheckBox {
+    spacing: 6px;
+    font-weight: 500;
+}
+QCheckBox::indicator {
+    width: 18px;
+    height: 18px;
+    border: 2px solid #219EBC;
+    border-radius: 9px;
+    background-color: #FFFFFF;
+}
+QCheckBox::indicator:checked {
+    background-color: #FB8500;
+    border: 2px solid #FFB703;
+}
+
+/* === Вкладки === */
+QTabWidget::pane {
+    border: 1px solid #BFDCE5;
+    top: -1px;
+  
+}
+QTabBar::tab {
+    background: #E6EEF3;
+    padding: 6px 14px;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    margin-right: 6px;
+    font-size: 9pt;
+    color: #023047;
+    margin-top:6px;
+}
+QTabBar::tab:selected {
+    background: #219EBC;
+    color: white;
+}
+
+/* === Прогресс-бар === */
+QProgressBar {
+    border: 1px solid #BFDCE5;
+    border-radius: 6px;
+    text-align: center;
+    background: #FFFFFF;
+    font-size: 9pt;
+}
+QProgressBar::chunk {
+    background-color: #FFB703;
+    width: 20px;
+}
+
+/* === Слайдер === */
+QSlider::groove:horizontal {
+    border: 1px solid #BFDCE5;
+    height: 6px;
+    background: #E0E0E0;
+    border-radius: 3px;
+}
+QSlider::handle:horizontal {
+    background: #FFB703;
+    border: 1px solid #FB8500;
+    width: 14px;
+    margin: -4px 0;
+    border-radius: 7px;
+}
+
+/* === Скроллбары с заливкой вместо сетки === */
+QScrollBar:vertical, QScrollBar:horizontal {
+    background: #E3F3F9;
+    border: none;
+    width: 10px;
+    height: 10px;
+    margin: 0;
+}
+QScrollBar::handle:vertical, QScrollBar::handle:horizontal {
+    background: #8ECAE6;
+    border-radius: 6px;
+    min-height: 20px;
+    min-width: 20px;
+}
+QScrollBar::handle:vertical:hover, QScrollBar::handle:horizontal:hover {
+    background: #FFB703;
+}
+QScrollBar::add-line, QScrollBar::sub-line {
+    height: 0;
+    width: 0;
+    background: none;
+}
+
